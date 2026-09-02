@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { RecordService } from './record.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class App {
 
   message = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private recordService: RecordService) {}
 
   submit() {
     const data = {
@@ -29,7 +29,7 @@ export class App {
       observation: this.observation
     };
 
-    this.http.post('http://127.0.0.1:8001/records', data).subscribe({
+    this.recordService.createRecord(data).subscribe({
       next: () => {
         this.message = 'Registro salvo com sucesso!';
         this.name = '';
