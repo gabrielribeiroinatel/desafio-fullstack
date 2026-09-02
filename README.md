@@ -88,16 +88,19 @@ npm run dev
 - Documentação Swagger
 - Dockerfiles e docker-compose.yml
 
+## Banco de dados
+
+A persistência com PostgreSQL 17 foi validada localmente durante o desenvolvimento.
+
+O backend utiliza as tabelas:
+
+- employees
+- records
+
+Foi validado o cadastro de registros por meio do endpoint POST /records utilizando PostgreSQL.
+
+O SQLite foi utilizado inicialmente como fallback durante o desenvolvimento.
+
 ## Limitações conhecidas
 
-O ambiente utilizado durante a prova não possuía os comandos Docker e PostgreSQL disponíveis.
-
-Por esse motivo, o fluxo principal foi validado localmente utilizando SQLite como fallback do backend.
-
-A configuração de PostgreSQL e Docker Compose foi preparada para execução em um ambiente com Docker disponível.
-
-## Decisões
-
-Foi priorizado um fluxo ponta a ponta simples e funcional, conforme solicitado no desafio.
-
-A modelagem utiliza uma tabela de funcionários e uma tabela de registros históricos, preservando os registros por data de referência.
+O Docker Compose foi configurado, porém não pôde ser executado no ambiente da prova porque o comando Docker não estava disponível na máquina.
