@@ -1,0 +1,50 @@
+<div class="container">
+  <h1>Cadastro de Indicadores</h1>
+
+  <form (ngSubmit)="submit()">
+
+    <label>Nome</label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="name"
+      required
+    />
+
+    <label>Departamento</label>
+    <input
+      type="text"
+      [(ngModel)]="department"
+      name="department"
+      required
+    />
+
+    <label>Data de referência</label>
+    <input
+      type="date"
+      [(ngModel)]="reference_date"
+      name="reference_date"
+      required
+    />
+
+    <label>Quantidade de entregas</label>
+    <input
+      type="number"
+      [(ngModel)]="deliveries"
+      name="deliveries"
+      min="0"
+      required
+    />
+
+    <label>Observação</label>
+    <textarea
+      [(ngModel)]="observation"
+      name="observation"
+    ></textarea>
+
+    <button type="submit">Salvar registro</button>
+
+  </form>
+
+  <p>{{ message }}</p>
+</div>
