@@ -101,6 +101,17 @@ Foi validado o cadastro de registros por meio do endpoint POST /records utilizan
 
 O SQLite foi utilizado inicialmente como fallback durante o desenvolvimento.
 
+## Docker
+
+A execução com Docker Compose foi validada utilizando WSL 2 com Ubuntu 24.04.
+
+Os serviços executados foram:
+
+- PostgreSQL
+- FastAPI
+- Angular
+- React
+
 ## Limitações conhecidas
 
-O Docker Compose foi configurado, porém não pôde ser executado no ambiente da prova porque o comando Docker não estava disponível na máquina.
+Não foram identificadas limitações impeditivas durante a validação local.
